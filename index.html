@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ayush Rana — Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ░░ PRELOADER ░░ -->
+  <div id="preloader">
+    <div class="pre-wrap">
+      <div class="pre-logo">AR</div>
+      <div class="pre-bar"><div class="pre-progress"></div></div>
+      <span class="pre-label">Loading</span>
+    </div>
+  </div>
+
+  <!-- ░░ CURSOR ░░ -->
+  <div class="cur-dot" id="curDot"></div>
+  <div class="cur-circle" id="curCircle"></div>
+
+  <!-- ░░ NAVBAR ░░ -->
+  <header id="header">
+    <nav class="nav-container">
+      <a href="#home" class="nav-brand">
+        <span class="brand-initials">AR</span>
+        <span class="brand-sep"></span>
+        <span class="brand-name">Ayush Rana</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"       class="nl active">Home</a></li>
+        <li><a href="#philosophy" class="nl">Philosophy</a></li>
+        <li><a href="#about"      class="nl">About</a></li>
+        <li><a href="#education"  class="nl">Education</a></li>
+        <li><a href="#experience" class="nl">Experience</a></li>
+        <li><a href="#skills"     class="nl">Skills</a></li>
+        <li><a href="#gallery"    class="nl">Gallery</a></li>
+        <li><a href="#interests"  class="nl">Interests</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeBtn" class="theme-btn" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </button>
+        <button id="menuBtn" class="menu-btn" aria-label="Menu"><span></span><span></span></button>
+      </div>
+    </nav>
+    <div class="mobile-drawer" id="drawer">
+      <a href="#home"       class="dl">Home</a>
+      <a href="#philosophy" class="dl">Philosophy</a>
+      <a href="#about"      class="dl">About</a>
+      <a href="#education"  class="dl">Education</a>
+      <a href="#experience" class="dl">Experience</a>
+      <a href="#skills"     class="dl">Skills</a>
+      <a href="#gallery"    class="dl">Gallery</a>
+      <a href="#interests"  class="dl">Interests</a>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 1 — HOME (with photo placeholder)
+  ═══════════════════════════════════════ -->
+  <section id="home" class="s-home">
+    <canvas id="bgCanvas"></canvas>
+
+    <div class="home-grid">
+      <!-- Left: text -->
+      <div class="home-text">
+        <p class="home-eyebrow fade-up">Full Stack Software Developer</p>
+        <h1 class="home-headline fade-up">
+          <span class="hl-line hl-thin">Ayush</span>
+          <span class="hl-line hl-bold">Rana</span>
+        </h1>
+        <p class="home-alias fade-up">
+          <span class="alias-bracket">[</span> Wizard <span class="alias-bracket">]</span>
+        </p>
+        <p class="home-sub fade-up">
+          Architecting scalable systems at the intersection<br/>
+          of logic, design, and vision.
+        </p>
+        <div class="home-meta fade-up">
+          <span class="hm-item">MICM Net Solution Pvt. Ltd.</span>
+          <span class="hm-dot">·</span>
+          <span class="hm-item">MSc IT · VNSGU</span>
+          <span class="hm-dot">·</span>
+          <span class="hm-item available"><span class="pulse-ring"></span>Available</span>
+        </div>
+        <div class="home-cta fade-up">
+          <a href="#about"  class="cta-primary">View Profile</a>
+          <a href="#skills" class="cta-ghost">Explore Skills</a>
+        </div>
+      </div>
+
+      <!-- Right: photo placeholder -->
+      <div class="home-photo fade-right">
+        <div class="photo-frame">
+          <div class="photo-placeholder">
+            <!-- Artistic SVG avatar placeholder -->
+            <img src="Ayush_Profile.png"/>
+            <!-- Overlay text -->
+            <div class="ph-label">
+              <span class="ph-name">Ayush Rana</span>
+              <span class="ph-replace"></span>
+            </div>
+          </div>
+
+          <!-- Decorative frame lines -->
+          <div class="frame-corner fc-tl"></div>
+          <div class="frame-corner fc-tr"></div>
+          <div class="frame-corner fc-bl"></div>
+          <div class="frame-corner fc-br"></div>
+        </div>
+
+        <!-- Floating stat pills -->
+        <div class="stat-pill sp-top fade-up" style="--d:0.6s">
+          <span class="sp-val">Full Stack</span>
+          <span class="sp-lab">Developer</span>
+        </div>
+        <div class="stat-pill sp-bot fade-up" style="--d:0.8s">
+          <span class="sp-val">Wizard</span>
+          <span class="sp-lab">Gaming Alias</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-scroll">
+      <span>Scroll</span>
+      <div class="hs-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 2 — PHILOSOPHY (Dramatic Quote Walls)
+  ═══════════════════════════════════════ -->
+  <section id="philosophy" class="s-philosophy">
+
+    <!-- Wall 1: Giant statement -->
+    <div class="qwall qwall-1">
+      <div class="qw-inner">
+        <span class="qw-num">01</span>
+        <h2 class="qw-text">
+          <em>Code</em> is not<br/>
+          just logic—<br/>
+          it is a way of<br/>
+          <em>seeing.</em>
+        </h2>
+        <p class="qw-attr">— On Engineering</p>
+      </div>
+      <div class="qw-deco qwd-1">LOGIC</div>
+      <div class="qw-deco qwd-2">VISION</div>
+    </div>
+
+    <!-- Wall 2: Centered cinematic -->
+    <div class="qwall qwall-2">
+      <div class="qw-inner qw-center">
+        <span class="qw-num">02</span>
+        <h2 class="qw-text qw-italic">
+          &ldquo;The wizard doesn&rsquo;t<br/>follow the map.<br/>
+          He writes<br/>the terrain.&rdquo;
+        </h2>
+        <p class="qw-attr">— On Identity</p>
+      </div>
+      <div class="qw-bg-letter">W</div>
+    </div>
+
+    <!-- Wall 3: Split layout -->
+    <div class="qwall qwall-3">
+      <div class="qw-split">
+        <div class="qws-left">
+          <span class="qw-num">03</span>
+          <h2 class="qw-text qw-small">
+            Every bug is a question<br/>
+            the universe asks you<br/>
+            to answer<br/>
+            <em>more precisely.</em>
+          </h2>
+          <p class="qw-attr">— On Debugging</p>
+        </div>
+        <div class="qws-right">
+          <span class="qw-num">04</span>
+          <h2 class="qw-text qw-small">
+            Technology<br/>without vision<br/>
+            is a tool.<br/>
+            <em>With vision,</em><br/>
+            civilisation.
+          </h2>
+          <p class="qw-attr">— On Purpose</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wall 4: Monumental single word -->
+    <div class="qwall qwall-4">
+      <div class="qw-inner qw-center">
+        <span class="qw-num">05</span>
+        <p class="qw-pretext">You are not learning to program.</p>
+        <h2 class="qw-mono">You are learning<br/><em>to think.</em></h2>
+        <p class="qw-attr">— On Growth</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 3 — ABOUT
+  ═══════════════════════════════════════ -->
+  <section id="about" class="s-about">
+    <div class="section-wrap">
+      <header class="sh">
+        <span class="sh-num">02</span>
+        <div>
+          <h2 class="sh-title">About</h2>
+          <p class="sh-desc">Developer. Thinker. Builder.</p>
+        </div>
+      </header>
+      <div class="about-layout">
+        <div class="about-content fade-up">
+          <h3 class="ac-name">Ayush Rana <span class="ac-alias">/ Wizard</span></h3>
+          <p class="ac-role">Full Stack Software Developer · MICM Net Solution Pvt. Ltd.</p>
+          <p class="ac-body">I am a full-stack developer who believes every system worth building carries an idea worth expressing. My work blends engineering precision with creative thinking — producing applications that are not only functional, but meaningful.</p>
+          <p class="ac-body">Currently crafting digital products at <strong>MICM Net Solution Pvt. Ltd.</strong>, where I architect end-to-end solutions from database layer to polished interface. My academic foundation at <strong>VNSGU</strong> shaped the analytical rigour I bring to every engagement.</p>
+          <p class="ac-body">Beyond the screen, I am known as <strong>Wizard</strong> — a name earned in competitive gaming arenas, and one that reflects how I approach every challenge: with strategy, patience, and the will to find a way through.</p>
+          <div class="ac-tags">
+            <span>Ayush Rana</span><span>Wizard</span><span>Full Stack Dev</span><span>MSc IT · VNSGU</span><span>MICM Net Solution</span>
+          </div>
+        </div>
+        <div class="about-stats fade-right">
+          <div class="astat">
+            <span class="astat-val">MSc IT</span>
+            <span class="astat-lab">Post Graduate · VNSGU</span>
+          </div>
+          <div class="astat-div"></div>
+          <div class="astat">
+            <span class="astat-val">Full Stack</span>
+            <span class="astat-lab">Developer · MICM</span>
+          </div>
+          <div class="astat-div"></div>
+          <div class="astat">
+            <span class="astat-val">Wizard</span>
+            <span class="astat-lab">Gaming Alias</span>
+          </div>
+          <div class="astat-div"></div>
+          <div class="astat">
+            <span class="astat-val available-dot">Available</span>
+            <span class="astat-lab">Open to Projects</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 4 — EDUCATION
+  ═══════════════════════════════════════ -->
+  <section id="education" class="s-education">
+    <div class="section-wrap">
+      <header class="sh">
+        <span class="sh-num">03</span>
+        <div>
+          <h2 class="sh-title">Education</h2>
+          <p class="sh-desc">Academic milestones that shaped the foundation.</p>
+        </div>
+      </header>
+      <div class="edu-grid">
+        <div class="edu-card fade-up" style="--d:0.05s">
+          <div class="edc-level">Post-Graduate</div>
+          <div class="edc-line"></div>
+          <h3 class="edc-degree">Master of Science in Information Technology</h3>
+          <p class="edc-abbr">MSc IT</p>
+          <p class="edc-uni">Veer Narmad South Gujarat University (VNSGU)</p>
+          <p class="edc-desc">Advanced study in software engineering, database systems, web technologies, and intelligent computing. Developed the analytical and architectural thinking that underpins every system I design.</p>
+          <div class="edc-tags"><span>Software Engineering</span><span>Database Systems</span><span>Algorithms</span><span>Web Technologies</span></div>
+        </div>
+        <div class="edu-card fade-up" style="--d:0.15s">
+          <div class="edc-level">Undergraduate</div>
+          <div class="edc-line"></div>
+          <h3 class="edc-degree">Bachelor of Science in Information Technology</h3>
+          <p class="edc-abbr">BSc IT</p>
+          <p class="edc-uni">Veer Narmad South Gujarat University (VNSGU)/p>
+          <p class="edc-desc">The origin point. Where the first program ran, the first logic was traced, and the foundational love for computing took permanent root. Programming, networking, and object-oriented design.</p>
+          <div class="edc-tags"><span>Programming</span><span>OOP Concepts</span><span>Networking</span><span>System Design</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 5 — EXPERIENCE
+  ═══════════════════════════════════════ -->
+  <section id="experience" class="s-experience">
+    <div class="section-wrap">
+      <header class="sh">
+        <span class="sh-num">04</span>
+        <div>
+          <h2 class="sh-title">Experience</h2>
+          <p class="sh-desc">Professional work that defines the craft.</p>
+        </div>
+      </header>
+      <div class="exp-layout">
+        <div class="exp-left fade-left">
+          <p class="expl-company">MICM Net Solution Pvt. Ltd.</p>
+          <h3 class="expl-role">Full Stack Software Developer</h3>
+          <span class="expl-badge">Current Position</span>
+          <p class="expl-summary">Engineering end-to-end web solutions that serve real business objectives. I own the full stack — from schema design to pixel-perfect UI — ensuring every layer performs with integrity.</p>
+        </div>
+        <div class="exp-right fade-right">
+          <div class="expr-item"><div class="expri-dot"></div><div><h4 class="expri-title">Full-Stack Web Development</h4><p class="expri-body">Building dynamic, scalable applications using ASP.NET MVC, C#, and modern JavaScript — from concept to production deployment.</p></div></div>
+          <div class="expr-item"><div class="expri-dot"></div><div><h4 class="expri-title">API Architecture &amp; Integration</h4><p class="expri-body">Designing robust RESTful APIs and integrating third-party services into cohesive, high-performance systems.</p></div></div>
+          <div class="expr-item"><div class="expri-dot"></div><div><h4 class="expri-title">Frontend Engineering</h4><p class="expri-body">Crafting responsive, accessible interfaces with HTML5, CSS3, Bootstrap, and jQuery — precision at the pixel level.</p></div></div>
+          <div class="expr-item"><div class="expri-dot"></div><div><h4 class="expri-title">Database Design &amp; Optimisation</h4><p class="expri-body">Modelling efficient SQL schemas, writing optimised queries, and maintaining data integrity at scale.</p></div></div>
+          <div class="expr-item"><div class="expri-dot"></div><div><h4 class="expri-title">Cross-Team Collaboration</h4><p class="expri-body">Partnering with designers, stakeholders, and engineers to deliver production-grade software on schedule.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 6 — SKILLS
+  ═══════════════════════════════════════ -->
+  <section id="skills" class="s-skills">
+    <div class="section-wrap">
+      <header class="sh">
+        <span class="sh-num">05</span>
+        <div>
+          <h2 class="sh-title">Skills</h2>
+          <p class="sh-desc">The technical breadth behind every build.</p>
+        </div>
+      </header>
+      <div class="skills-layout">
+        <div class="sk-group fade-up" style="--d:0.05s">
+          <h4 class="skg-label">Frontend</h4>
+          <div class="sk-bars">
+            <div class="sk-bar"><div class="skb-meta"><span>HTML5 / CSS3</span><span>95%</span></div><div class="skb-track"><div class="skb-fill" data-w="95"></div></div></div>
+            <div class="sk-bar"><div class="skb-meta"><span>JavaScript ES6+</span><span>88%</span></div><div class="skb-track"><div class="skb-fill" data-w="88"></div></div></div>
+            <div class="sk-bar"><div class="skb-meta"><span>Bootstrap</span><span>85%</span></div><div class="skb-track"><div class="skb-fill" data-w="85"></div></div></div>
+            <div class="sk-bar"><div class="skb-meta"><span>jQuery</span><span>82%</span></div><div class="skb-track"><div class="skb-fill" data-w="82"></div></div></div>
+          </div>
+        </div>
+        <div class="sk-group fade-up" style="--d:0.15s">
+          <h4 class="skg-label">Backend</h4>
+          <div class="sk-bars">
+            <div class="sk-bar"><div class="skb-meta"><span>ASP.NET MVC</span><span>90%</span></div><div class="skb-track"><div class="skb-fill" data-w="90"></div></div></div>
+            <div class="sk-bar"><div class="skb-meta"><span>C# / .NET</span><span>87%</span></div><div class="skb-track"><div class="skb-fill" data-w="87"></div></div></div>
+            <div class="sk-bar"><div class="skb-meta"><span>REST APIs</span><span>85%</span></div><div class="skb-track"><div class="skb-fill" data-w="85"></div></div></div>
+            <div class="sk-bar"><div class="skb-meta"><span>SQL / MSSQL</span><span>83%</span></div><div class="skb-track"><div class="skb-fill" data-w="83"></div></div></div>
+          </div>
+        </div>
+        <div class="sk-group sk-tools fade-up" style="--d:0.25s">
+          <h4 class="skg-label">Tools &amp; Ecosystem</h4>
+          <div class="sk-badges">
+            <span>Visual Studio</span><span>VS Code</span><span>Git</span>
+            <span>GitHub</span><span>Postman</span><span>SQL Server</span>
+            <span>AJAX</span><span>JSON / XML</span><span>MVC Pattern</span>
+            <span>Responsive Design</span><span>LINQ</span><span>Entity Framework</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 7 — BEHIND THE WIZARD (Gallery)
+  ═══════════════════════════════════════ -->
+  <section id="gallery" class="s-gallery">
+    <div class="section-wrap">
+      <header class="sh">
+        <span class="sh-num">06</span>
+        <div>
+          <h2 class="sh-title">Behind the Wizard</h2>
+          <p class="sh-desc">Moments, memories, and the person behind the code.</p>
+        </div>
+      </header>
+
+      <p class="gallery-hint fade-up">
+        Upload your photos to replace these placeholders — each slot tells a story.
+      </p>
+
+      <div class="gallery-grid fade-up" style="--d:0.1s">
+
+        <!-- Large featured slot -->
+        <div class="gallery-item gi-large gi-1">
+          <div class="gi-inner">
+            <svg class="gi-svg" viewBox="0 0 500 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g1a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="var(--accent)" stop-opacity="0.08"/><stop offset="100%" stop-color="var(--accent)" stop-opacity="0.02"/></linearGradient>
+              </defs>
+              <rect width="500" height="360" fill="url(#g1a)"/>
+              <!-- Grid lines -->
+              <line x1="0" y1="90" x2="500" y2="90" stroke="var(--border)" stroke-width="0.5"/>
+              <line x1="0" y1="270" x2="500" y2="270" stroke="var(--border)" stroke-width="0.5"/>
+              <line x1="125" y1="0" x2="125" y2="360" stroke="var(--border)" stroke-width="0.5"/>
+              <line x1="375" y1="0" x2="375" y2="360" stroke="var(--border)" stroke-width="0.5"/>
+              <!-- Central figure silhouette (seated at desk) -->
+              <ellipse cx="250" cy="200" rx="30" ry="36" fill="var(--accent)" fill-opacity="0.12" stroke="var(--accent)" stroke-width="0.8" stroke-opacity="0.3"/>
+              <rect x="225" y="232" width="50" height="16" rx="3" fill="var(--accent)" fill-opacity="0.10"/>
+              <!-- Desk -->
+              <rect x="130" y="252" width="240" height="6" rx="2" fill="var(--accent)" fill-opacity="0.18"/>
+              <rect x="135" y="258" width="8" height="35" rx="2" fill="var(--accent)" fill-opacity="0.12"/>
+              <rect x="357" y="258" width="8" height="35" rx="2" fill="var(--accent)" fill-opacity="0.12"/>
+              <!-- Monitor on desk -->
+              <rect x="205" y="218" width="90" height="34" rx="2" fill="none" stroke="var(--accent)" stroke-width="1" stroke-opacity="0.3"/>
+              <rect x="208" y="221" width="84" height="28" rx="1" fill="var(--accent)" fill-opacity="0.06"/>
+              <!-- Code lines on monitor -->
+              <rect x="212" y="226" width="45" height="2" rx="1" fill="var(--accent)" fill-opacity="0.4"/>
+              <rect x="212" y="231" width="32" height="2" rx="1" fill="var(--accent)" fill-opacity="0.25"/>
+              <rect x="212" y="236" width="55" height="2" rx="1" fill="var(--accent)" fill-opacity="0.3"/>
+              <rect x="212" y="241" width="28" height="2" rx="1" fill="var(--accent)" fill-opacity="0.2"/>
+              <!-- Corner marks -->
+              <path d="M20 20 L50 20 M20 20 L20 50" stroke="var(--accent)" stroke-width="1.2" stroke-opacity="0.5"/>
+              <path d="M480 20 L450 20 M480 20 L480 50" stroke="var(--accent)" stroke-width="1.2" stroke-opacity="0.5"/>
+              <path d="M20 340 L50 340 M20 340 L20 310" stroke="var(--accent)" stroke-width="1.2" stroke-opacity="0.5"/>
+              <path d="M480 340 L450 340 M480 340 L480 310" stroke="var(--accent)" stroke-width="1.2" stroke-opacity="0.5"/>
+            </svg>
+            <div class="gi-overlay">
+              <span class="gi-label">At the Desk</span>
+              <span class="gi-sub">Replace with your photo →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medium slot 2 -->
+        <div class="gallery-item gi-med gi-2">
+          <div class="gi-inner">
+            <svg class="gi-svg" viewBox="0 0 300 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g2a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="var(--accent)" stop-opacity="0.06"/><stop offset="100%" stop-color="var(--accent)" stop-opacity="0.02"/></linearGradient></defs>
+              <rect width="300" height="260" fill="url(#g2a)"/>
+              <!-- Circular composition -->
+              <circle cx="150" cy="120" r="70" stroke="var(--accent)" stroke-width="0.5" stroke-opacity="0.15" fill="none"/>
+              <circle cx="150" cy="120" r="55" stroke="var(--accent)" stroke-width="0.5" stroke-opacity="0.1" fill="none"/>
+              <!-- Silhouette head + torso -->
+              <ellipse cx="150" cy="100" rx="25" ry="30" fill="var(--accent)" fill-opacity="0.14" stroke="var(--accent)" stroke-width="0.6" stroke-opacity="0.3"/>
+              <path d="M110 175 Q130 150 150 148 Q170 150 190 175 Q170 168 150 166 Q130 168 110 175Z" fill="var(--accent)" fill-opacity="0.10"/>
+              <!-- Controller in hand (gaming) -->
+              <rect x="118" y="168" width="64" height="22" rx="11" fill="var(--accent)" fill-opacity="0.18" stroke="var(--accent)" stroke-width="0.8" stroke-opacity="0.35"/>
+              <circle cx="133" cy="177" r="4" fill="var(--accent)" fill-opacity="0.4"/>
+              <circle cx="167" cy="177" r="4" fill="var(--accent)" fill-opacity="0.4"/>
+              <circle cx="150" cy="172" r="2" fill="var(--accent)" fill-opacity="0.5"/>
+              <circle cx="150" cy="183" r="2" fill="var(--accent)" fill-opacity="0.5"/>
+              <circle cx="144" cy="177" r="2" fill="var(--accent)" fill-opacity="0.5"/>
+              <circle cx="156" cy="177" r="2" fill="var(--accent)" fill-opacity="0.5"/>
+              <!-- Label: WIZARD mode -->
+              <text x="150" y="228" text-anchor="middle" font-family="monospace" font-size="9" fill="var(--accent)" fill-opacity="0.4" letter-spacing="3">WIZARD MODE</text>
+              <path d="M20 20 L40 20 M20 20 L20 40" stroke="var(--accent)" stroke-width="1" stroke-opacity="0.4"/>
+              <path d="M280 20 L260 20 M280 20 L280 40" stroke="var(--accent)" stroke-width="1" stroke-opacity="0.4"/>
+            </svg>
+            <div class="gi-overlay">
+              <span class="gi-label">Wizard Mode</span>
+              <span class="gi-sub">Gaming · Strategy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Small slot 3 -->
+        <div class="gallery-item gi-small gi-3">
+          <div class="gi-inner">
+            <svg class="gi-svg" viewBox="0 0 260 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g3a" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="var(--accent)" stop-opacity="0.1"/><stop offset="100%" stop-color="var(--accent)" stop-opacity="0.02"/></linearGradient></defs>
+              <rect width="260" height="200" fill="url(#g3a)"/>
+              <!-- Graduation cap icon -->
+              <path d="M130 60 L170 76 L130 92 L90 76 Z" fill="var(--accent)" fill-opacity="0.25" stroke="var(--accent)" stroke-width="1" stroke-opacity="0.5"/>
+              <path d="M170 76 L170 100 Q150 110 130 108 Q110 110 90 100 L90 76" fill="none" stroke="var(--accent)" stroke-width="0.8" stroke-opacity="0.3"/>
+              <line x1="170" y1="76" x2="170" y2="102" stroke="var(--accent)" stroke-width="1.2" stroke-opacity="0.4"/>
+              <circle cx="170" cy="104" r="4" fill="var(--accent)" fill-opacity="0.5"/>
+              <!-- VNSGU text -->
+              <text x="130" y="145" text-anchor="middle" font-family="monospace" font-size="8" fill="var(--accent)" fill-opacity="0.5" letter-spacing="2">VNSGU · MSc IT</text>
+              <!-- Horizontal lines -->
+              <line x1="40" y1="165" x2="105" y2="165" stroke="var(--accent)" stroke-width="0.5" stroke-opacity="0.3"/>
+              <line x1="155" y1="165" x2="220" y2="165" stroke="var(--accent)" stroke-width="0.5" stroke-opacity="0.3"/>
+              <path d="M20 20 L36 20 M20 20 L20 36" stroke="var(--accent)" stroke-width="1" stroke-opacity="0.4"/>
+              <path d="M240 20 L224 20 M240 20 L240 36" stroke="var(--accent)" stroke-width="1" stroke-opacity="0.4"/>
+            </svg>
+            <div class="gi-overlay">
+              <span class="gi-label">Graduation</span>
+              <span class="gi-sub">MSc IT · VNSGU</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Small slot 4 -->
+        <div class="gallery-item gi-small gi-4">
+          <div class="gi-inner">
+            <svg class="gi-svg" viewBox="0 0 260 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g4a" x1="1" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="var(--accent)" stop-opacity="0.08"/><stop offset="100%" stop-color="var(--accent)" stop-opacity="0.02"/></linearGradient></defs>
+              <rect width="260" height="200" fill="url(#g4a)"/>
+              <!-- Network / collaboration nodes -->
+              <circle cx="130" cy="95" r="14" fill="var(--accent)" fill-opacity="0.2" stroke="var(--accent)" stroke-width="1" stroke-opacity="0.4"/>
+              <circle cx="80"  cy="65" r="9"  fill="var(--accent)" fill-opacity="0.12" stroke="var(--accent)" stroke-width="0.8" stroke-opacity="0.3"/>
+              <circle cx="180" cy="65" r="9"  fill="var(--accent)" fill-opacity="0.12" stroke="var(--accent)" stroke-width="0.8" stroke-opacity="0.3"/>
+              <circle cx="75"  cy="130" r="9" fill="var(--accent)" fill-opacity="0.12" stroke="var(--accent)" stroke-width="0.8" stroke-opacity="0.3"/>
+              <circle cx="185" cy="130" r="9" fill="var(--accent)" fill-opacity="0.12" stroke="var(--accent)" stroke-width="0.8" stroke-opacity="0.3"/>
+              <line x1="130" y1="95" x2="80"  y2="65"  stroke="var(--accent)" stroke-width="0.7" stroke-opacity="0.25"/>
+              <line x1="130" y1="95" x2="180" y2="65"  stroke="var(--accent)" stroke-width="0.7" stroke-opacity="0.25"/>
+              <line x1="130" y1="95" x2="75"  y2="130" stroke="var(--accent)" stroke-width="0.7" stroke-opacity="0.25"/>
+              <line x1="130" y1="95" x2="185" y2="130" stroke="var(--accent)" stroke-width="0.7" stroke-opacity="0.25"/>
+              <text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="var(--accent)" fill-opacity="0.4" letter-spacing="2">COLLABORATION</text>
+              <path d="M20 20 L36 20 M20 20 L20 36" stroke="var(--accent)" stroke-width="1" stroke-opacity="0.4"/>
+              <path d="M240 20 L224 20 M240 20 L240 36" stroke="var(--accent)" stroke-width="1" stroke-opacity="0.4"/>
+            </svg>
+            <div class="gi-overlay">
+              <span class="gi-label">Team Work</span>
+              <span class="gi-sub">MICM · Building Together</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medium slot 5 -->
+        <div class="gallery-item gi-med gi-5">
+          <div class="gi-inner">
+            <svg class="gi-svg" viewBox="0 0 300 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g5a" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="var(--accent)" stop-opacity="0.07"/><stop offset="100%" stop-color="var(--accent)" stop-opacity="0.02"/></linearGradient></defs>
+              <rect width="300" height="260" fill="url(#g5a)"/>
+              <!-- Portrait: Thoughtful / reading -->
+              <ellipse cx="150" cy="105" rx="32" ry="38" fill="var(--accent)" fill-opacity="0.12" stroke="var(--accent)" stroke-width="0.8" stroke-opacity="0.3"/>
+              <rect x="126" y="140" width="48" height="15" rx="3" fill="var(--accent)" fill-opacity="0.08"/>
+              <!-- Book / tablet held -->
+              <rect x="105" y="160" width="90" height="62" rx="3" fill="none" stroke="var(--accent)" stroke-width="1" stroke-opacity="0.25"/>
+              <rect x="107" y="162" width="86" height="58" rx="2" fill="var(--accent)" fill-opacity="0.06"/>
+              <line x1="150" y1="162" x2="150" y2="220" stroke="var(--accent)" stroke-width="0.5" stroke-opacity="0.2"/>
+              <!-- Text lines on book -->
+              <rect x="113" y="170" width="33" height="1.5" rx="0.75" fill="var(--accent)" fill-opacity="0.3"/>
+              <rect x="113" y="175" width="28" height="1.5" rx="0.75" fill="var(--accent)" fill-opacity="0.2"/>
+              <rect x="113" y="180" width="31" height="1.5" rx="0.75" fill="var(--accent)" fill-opacity="0.25"/>
+              <rect x="113" y="185" width="25" height="1.5" rx="0.75" fill="var(--accent)" fill-opacity="0.18"/>
+              <rect x="155" y="170" width="33" height="1.5" rx="0.75" fill="var(--accent)" fill-opacity="0.3"/>
+              <rect x="155" y="175" width="28" height="1.5" rx="0.75" fill="var(--accent)" fill-opacity="0.2"/>
+              <text x="150" y="235" text-anchor="middle" font-family="monospace" font-size="8" fill="var(--accent)" fill-opacity="0.4" letter-spacing="2">ALWAYS LEARNING</text>
+              <path d="M20 20 L40 20 M20 20 L20 40" stroke="var(--accent)" stroke-width="1" stroke-opacity="0.4"/>
+              <path d="M280 20 L260 20 M280 20 L280 40" stroke="var(--accent)" stroke-width="1" stroke-opacity="0.4"/>
+            </svg>
+            <div class="gi-overlay">
+              <span class="gi-label">Always Learning</span>
+              <span class="gi-sub">Knowledge · Growth</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wide slot 6 -->
+        <div class="gallery-item gi-wide gi-6">
+          <div class="gi-inner">
+            <svg class="gi-svg" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g6a" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="var(--accent)" stop-opacity="0.08"/><stop offset="50%" stop-color="var(--accent)" stop-opacity="0.04"/><stop offset="100%" stop-color="var(--accent)" stop-opacity="0.08"/></linearGradient></defs>
+              <rect width="600" height="200" fill="url(#g6a)"/>
+              <!-- Cityscape / skyline silhouette -->
+              <path d="M0 200 L0 130 L30 130 L30 110 L50 110 L50 90 L70 90 L70 75 L90 75 L90 95 L110 95 L110 70 L130 70 L130 55 L145 55 L145 35 L155 35 L155 55 L170 55 L170 65 L190 65 L190 80 L210 80 L210 60 L225 60 L225 45 L235 45 L235 60 L250 60 L250 78 L270 78 L270 90 L290 90 L290 75 L310 75 L310 55 L325 55 L325 40 L335 40 L335 55 L350 55 L350 70 L370 70 L370 85 L390 85 L390 100 L410 100 L410 80 L430 80 L430 65 L445 65 L445 85 L465 85 L465 100 L485 100 L485 115 L510 115 L510 130 L540 130 L540 145 L570 145 L570 160 L600 160 L600 200 Z"
+                    fill="var(--accent)" fill-opacity="0.07"/>
+              <!-- Building windows -->
+              <rect x="72" y="80" width="5" height="5" fill="var(--accent)" fill-opacity="0.3"/>
+              <rect x="80" y="80" width="5" height="5" fill="var(--accent)" fill-opacity="0.2"/>
+              <rect x="113" y="75" width="5" height="5" fill="var(--accent)" fill-opacity="0.3"/>
+              <rect x="113" y="84" width="5" height="5" fill="var(--accent)" fill-opacity="0.2"/>
+              <rect x="148" y="42" width="4" height="4" fill="var(--accent)" fill-opacity="0.5"/>
+              <rect x="213" y="65" width="5" height="5" fill="var(--accent)" fill-opacity="0.3"/>
+              <rect x="213" y="74" width="5" height="5" fill="var(--accent)" fill-opacity="0.2"/>
+              <rect x="328" y="46" width="4" height="4" fill="var(--accent)" fill-opacity="0.5"/>
+              <rect x="315" y="60" width="5" height="5" fill="var(--accent)" fill-opacity="0.3"/>
+              <!-- Corner marks -->
+              <path d="M20 20 L44 20 M20 20 L20 44" stroke="var(--accent)" stroke-width="1.2" stroke-opacity="0.5"/>
+              <path d="M580 20 L556 20 M580 20 L580 44" stroke="var(--accent)" stroke-width="1.2" stroke-opacity="0.5"/>
+              <path d="M20 180 L44 180 M20 180 L20 156" stroke="var(--accent)" stroke-width="1.2" stroke-opacity="0.5"/>
+              <path d="M580 180 L556 180 M580 180 L580 156" stroke="var(--accent)" stroke-width="1.2" stroke-opacity="0.5"/>
+            </svg>
+            <div class="gi-overlay">
+              <span class="gi-label">The Bigger Picture</span>
+              <span class="gi-sub">Building things that matter</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end gallery-grid -->
+
+      <!-- Upload note -->
+      <div class="gallery-note fade-up" style="--d:0.2s">
+        <span class="gn-icon">↑</span>
+        <p>All placeholders above are ready to be replaced with your personal photos. Simply swap the <code>&lt;svg&gt;</code> inside each <code>.gi-inner</code> with an <code>&lt;img src="your-photo.jpg"&gt;</code>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 8 — INTERESTS
+  ═══════════════════════════════════════ -->
+  <section id="interests" class="s-interests">
+    <div class="section-wrap">
+      <header class="sh">
+        <span class="sh-num">07</span>
+        <div>
+          <h2 class="sh-title">Interests</h2>
+          <p class="sh-desc">What drives Wizard beyond the workspace.</p>
+        </div>
+      </header>
+      <div class="int-grid">
+        <div class="int-card fade-up" style="--d:0.05s"><span class="intc-num">01</span><h3 class="intc-title">Gaming</h3><p class="intc-body">In every arena, I am <em>Wizard</em> — reading patterns before they emerge, outmanoeuvring with strategy. Gaming sharpens the instincts that engineering demands.</p></div>
+        <div class="int-card fade-up" style="--d:0.12s"><span class="intc-num">02</span><h3 class="intc-title">Technology</h3><p class="intc-body">Not as a career, but as a lens. Technology reveals the architecture of the world — and I stay at the frontier because that is where the most interesting questions live.</p></div>
+        <div class="int-card fade-up" style="--d:0.19s"><span class="intc-num">03</span><h3 class="intc-title">Problem Solving</h3><p class="intc-body">Every problem is a poorly-asked question. Finding the right question — and then the elegant answer — is where the real craft begins.</p></div>
+        <div class="int-card fade-up" style="--d:0.26s"><span class="intc-num">04</span><h3 class="intc-title">Innovation</h3><p class="intc-body">Real innovation is quieter than disruption — it is seeing what is missing, understanding why it matters, and building it with integrity.</p></div>
+        <div class="int-card fade-up" style="--d:0.33s"><span class="intc-num">05</span><h3 class="intc-title">Continuous Learning</h3><p class="intc-body">The fastest path to irrelevance is certainty. I read, experiment, break things deliberately, and return each time with sharper understanding.</p></div>
+        <div class="int-card fade-up" style="--d:0.40s"><span class="intc-num">06</span><h3 class="intc-title">Open Web</h3><p class="intc-body">The internet is humanity's greatest collaborative work. Building accessible, performant, and meaningful experiences on the open web is a privilege I take seriously.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="sf-inner">
+      <div class="sf-brand">
+        <span class="sfb-initials">AR</span>
+        <div>
+          <p class="sfb-name">Ayush Rana <span>/ Wizard</span></p>
+          <p class="sfb-role">Full Stack Software Developer</p>
+        </div>
+      </div>
+      <p class="sf-quote">&ldquo;The code endures. The magic lives.&rdquo;</p>
+      <div class="sf-links">
+        <a href="#" class="sfl">GitHub</a>
+        <a href="#" class="sfl">LinkedIn</a>
+        <a href="#" class="sfl">Email</a>
+      </div>
+      <p class="sf-copy">&copy; 2025 Ayush Rana. Crafted with intention.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
